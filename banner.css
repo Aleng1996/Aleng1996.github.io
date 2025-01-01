@@ -1,0 +1,78 @@
+#bannerArea {margin-top: 10vh;}
+#bannerArea .wrap {width: 100%;max-width: 100%;}
+#bannerArea .wrap .bannerImg img {width: 100%;}
+#bannerArea .wrap .bannerText {position: absolute;top: 0;margin: 15vh 10vw auto;}
+#bannerArea .wrap .bannerText h2 {font-size: 4vw; color: rgb(35, 111, 161); margin-bottom: 0;}
+#bannerArea .wrap .bannerText h3 {font-size: 4vw; color: rgb(35, 111, 161); margin: 0 0 5vh;}
+#bannerArea .wrap .bannerText h3::after {display: block; content: ""; width: 115px; height: 3px; background-color: #005ead; margin-top: 23px;}
+#bannerArea .wrap .bannerText p {font-size: 1.8vw; color: #fff; margin-bottom: 5vh;}
+#bannerArea .wrap .bannerText .bannerBtn a {
+    min-width: 203px;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1.36px;
+    padding: 15px 20px;
+    text-align: center;
+    border-radius: 3px;
+    background: rgb(93, 147, 201);
+    background: -webkit-gradient(linear, left top, right top, from(rgb(93, 147, 201)), to(rgb(36, 105, 174)));
+    background: linear-gradient(90deg, rgb(93, 147, 201) 0%, rgb(36, 105, 174) 100%);
+    border: 1px solid #296caf;
+}
+.slick-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 2vh;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+}
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin: 0 9px;
+    padding: 0;
+    transition: all .5s;
+    cursor: pointer;
+}
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li.slick-active button:before {
+    border-radius: 5px;
+    background-color: #0175ae;
+}
+.slick-dots li button:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #ffffff;
+    text-align: center;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

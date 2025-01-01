@@ -1,0 +1,239 @@
+header {
+	position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: #ffffff;
+}
+header .wrap {
+	-webkit-box-align: center;
+	display: grid;
+	position: relative;
+	max-width: 100%;
+	z-index: 1;
+	grid-template-columns: 165px 60% 1fr;
+}
+header .logo {
+	width: 165px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+header .logo a {
+	display: flex;
+}
+header .logo img {
+	width: 100%;
+    display: block;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+header .rightBox {
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	width: 100%;
+}
+header .menuBox {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 105px;
+}
+header .menu {
+    margin: 0 -25px;
+}
+header .menu > li {
+    position: relative;
+    display: inline-block;
+    padding: 0 25px;
+}header .menu > li > span > a {
+    font-size: 19px;
+    letter-spacing: 1.14px;
+}header .menu > li a {
+    color: #545454;
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 34px 10px;
+    letter-spacing: 0.68px;
+    position: relative;
+}
+header .topLink {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: flex-end;
+    color: #484848;
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 1.14px;
+    width: 100%;
+    height: 95px;
+}
+header .esgBox {
+    width: 126px;
+}
+header .esgBox a {
+    display: block;
+    width: 100%;
+    color: #545454;
+    border: 1px solid #cecece;
+    border-radius: 2px;
+    text-align: center;
+    padding: 5.5px 10px;
+    position: relative;
+    background-image: linear-gradient(30deg, #296caf 50%, transparent 50%);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: 100%;
+}
+header .searchBox {
+    position: relative;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0 30px;
+    cursor: pointer;
+}
+header .searchBox .searchList {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 100%;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 2px 9px 0px rgba(20, 18, 18, 0.23);
+    box-shadow: 0px 2px 9px 0px rgba(20, 18, 18, 0.23);
+    width: 100%;
+    padding: 5px 0;
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+}
+header .searchBox .searchList li {
+    padding: 0 20px;
+}
+header .searchBox .searchTitle svg {
+    margin-right: 12px;
+    vertical-align: -2px;
+}
+header .searchBox .searchList li:not(:last-child) a {
+    border-bottom: 1px solid #dedede;
+}
+header .searchBox .searchList li a {
+    display: block;
+    color: #454545;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.68px;
+    text-align: center;
+    padding: 10px 10px 12px;
+}
+header .searchBox:after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    width: 1px;
+    height: 20px;
+    background-color: #dcdcdc;
+}
+header .languageBox {
+    padding: 0 28px 0 26px;
+    position: relative;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+header .languageBox .languageCurrent {
+    cursor: pointer;
+    position: relative;
+}
+header .languageBox .languageCurrent .txt {
+    margin-right: 15px;
+}
+header .languageBox .languageCurrent svg {
+    vertical-align: 4px;
+}
+header .languageBox .languageList {
+    width: 100%;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 2px 9px 0px rgba(20, 18, 18, 0.23);
+    box-shadow: 0px 2px 9px 0px rgba(20, 18, 18, 0.23);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+}
+header .languageBox .languageList li a:hover, header .languageBox .languageList li a.current {
+    color: #0175ae;
+}
+header .languageBox .languageList li a {
+    font-family: "Noto Sans SC", "Noto Sans TC", sans-serif;
+    color: #454545;
+    display: block;
+    font-size: 17px;
+    line-height: 1;
+    letter-spacing: 0.5px;
+    padding: 12.5px 10px;
+    text-align: center;
+}
+
+header .contBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100px;
+    height: 100%;
+    background-color: #296caf;
+}
+
+.icon_search {
+    color: #296caf;
+    width: 19px;
+    height: 19px;
+}
+.icon_arrowDown, .icon_arrowDown2 {
+    color: #296caf;
+    width: 10px;
+    height: 6px;
+}
+.outerWrap {
+    padding-top: 95px;
+    position: relative;
+}

@@ -1,0 +1,325 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.wrap{
+	width: 100%;
+	max-width: 1406px;
+}
+#mainArea .solution,#mainArea .advantage,#mainArea .product {padding: 50px 0 80px;}
+#mainArea .solution {background-color: #f7f7f7;}
+#mainArea .solution .wrap,#mainArea .advantage .wrap,#mainArea .product .wrap {width: 100%;max-width: 1400px;margin: 0 auto;}
+#mainArea .solution .titleBox,#mainArea .advantage .titleBox,#mainArea .product .titleBox {display: flex;flex-direction: column;align-items: center;}
+#mainArea .solution .titleBox h2,#mainArea .advantage .titleBox h2,#mainArea .product .titleBox h2 {color: #303030; font-size: 43px; font-weight: bold; letter-spacing: 3.44px; line-height: 1.5; margin: 0;}
+#mainArea .solution .titleBox span,#mainArea .advantage .titleBox span,#mainArea .product .titleBox span {font-size: 23px; color: #296caf; font-weight:bolder; letter-spacing: 1.84px; margin-top: 10px;}
+#mainArea .solution .titleBox span::after,#mainArea .advantage .titleBox span::after,#mainArea .product .titleBox span::after {display: block; content: ""; width: 36px; height: 3px; margin: 29px auto 23px; background-color: #296caf;}
+#mainArea .solution .solutionBtn ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+#mainArea .solution .solutionBtn ul li {
+    width: calc(25% - 2px);
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+#mainArea .solution .solutionBtn ul li a {
+    text-decoration: none;
+    padding: 30px;
+    color: black;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 18px;
+}
+#mainArea .solution .solutionBtn ul li::after {
+    content: ''; /* 偽元素的內容 */
+    width: 1px; /* 直線的寬度 */
+    height: 60%; /* 直線的高度，可根據需要調整 */
+    background-color: #ddd; /* 直線的顏色 */
+    position: absolute;
+    top: 50%; /* 垂直居中 */
+    right: 0; /* 靠右對齊 */
+    transform: translateY(-50%); /* 偏移居中對齊 */
+}
+
+/* 隱藏最後一個項目的直線 */
+#mainArea .solution .solutionBtn ul li:last-child::after {
+    display: none;
+}
+#mainArea .solution .solutionBtn ul li a:hover {
+    color: #296caf;
+}
+#mainArea .solution .solutionBtn ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 45px;
+    height: 2px;
+    background-color: #296caf;
+    transition: transform 0.3s ease;
+}
+
+/* 懸停時顯示直線 */
+#mainArea .solution .solutionBtn ul li a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+#mainArea .solution .solutionBtn .content-box {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    display: none;
+}
+#mainArea .solution .solutionBtn .content-box.active {
+    display: block;
+    position: relative;
+}
+#mainArea .solution .solutionBtn .content-box .solutionTxtBox {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: #e5edf1;
+    padding: 10px;
+    width: 520px;
+    background-image:url("/images/solution_txtBg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px 60px 70px;
+    z-index: 2;
+}
+#mainArea .solution .solutionBtn .content-box .solutionTxtBox .solutionTxtTitle {
+    color: #296caf;
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 1.62px;
+    line-height: 1.333;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#mainArea .solution .solutionBtn .content-box .solutionTxtBox .solutionTxtTitle::after {
+    position: relative;
+    display: block;
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: #296caf;
+    margin-top: 13px;
+    margin-bottom: 35px;
+}
+#mainArea .solution .solutionBtn .content-box .solutionTxtBox .solutionTxtInfo h4 {
+    color: #303030;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1.32px;
+    line-height: 1.63;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+#mainArea .solution .solutionBtn .content-box .solutionTxtBox .solutionTxtInfo span {
+    color: #727272;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.875;
+    margin-top: 8px;
+}
+#mainArea .solution .solutionBtn .content-box .solutionTxtBox .solutionTxtBtn {
+    margin-top: 40px;
+}
+#mainArea .solution .solutionBtn .content-box .solutionTxtBox .solutionTxtBtn a {
+    font-size: 20px;
+    color: #296caf;
+    font-weight: 500;
+}
+#mainArea .advantage {
+    background-image: url(/images/advantageBg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -220px center;
+    min-height: 975px;
+    height: 100vh;
+}
+#mainArea .advantage .titleBox {
+    margin-top: 100px;
+}
+#mainArea .advantage .advantageBox {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+#mainArea .advantage .advantageBox .advantageBoxOut{
+    background-image: url(/images/adv_circle.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 885px 502px;
+    height: 100vh;
+    width: 955px;
+    position: relative;
+}
+#mainArea .advantage .advantageBox .advantageBoxOut .advantageBoxOutCir {
+    width: 100%;
+    display: grid;
+    height: 502px;
+    grid-template-columns: repeat(2, 1fr);
+}
+#mainArea .advantage .advantageBox .advantageBoxOut .advantageBoxOutCir div.advantageBoxOutMinCir.advantageBoxOutMinCir{
+    display: flex;
+    align-items: center;
+    height: 168px;
+}
+#mainArea .advantage .advantageBox .advantageBoxOut .advantageBoxOutCir div.advantageBoxOutMinCir:nth-child(1) {
+    margin-left: 175px;
+}
+#mainArea .advantage .advantageBox .advantageBoxOut .advantageBoxOutCir div.advantageBoxOutMinCir:nth-child(2) {
+    margin-right: 175px;
+}
+#mainArea .advantage .advantageBox .advantageBoxOut .advantageBoxOutCir div.advantageBoxOutMinCir:nth-child(3) {
+    margin-left: 15px;
+}
+#mainArea .advantage .advantageBox .advantageBoxOut .advantageBoxOutCir div.advantageBoxOutMinCir:nth-child(4) {
+    margin-right: 15px;
+}
+#mainArea .advantage .advantageBox .advantageBoxOut .advantageBoxOutCir div.advantageBoxOutMinCir:nth-child(5) {
+    margin-left: 45px;
+}
+#mainArea .advantage .advantageBox .advantageBoxOut .advantageBoxOutCir div.advantageBoxOutMinCir:nth-child(6) {
+    margin-right: 45px;
+}
+#mainArea .advantage .advantageBox .advantageBoxOut .advantageBoxOutCir div.advantageBoxOutMinCir:nth-child(2),
+#mainArea .advantage .advantageBox .advantageBoxOut .advantageBoxOutCir div.advantageBoxOutMinCir:nth-child(4),
+#mainArea .advantage .advantageBox .advantageBoxOut .advantageBoxOutCir div.advantageBoxOutMinCir:nth-child(6) {
+    justify-content: flex-end;
+}
+#mainArea .advantage .advantageBox .advantageBoxOut .advantageBoxOutCir div.advantageBoxOutMinCir:nth-child(3),
+#mainArea .advantage .advantageBox .advantageBoxOut .advantageBoxOutCir div.advantageBoxOutMinCir:nth-child(4) {
+    height: 306px;
+}
+#mainArea .advantage .advantageBox .advantageBoxOut .advantageBoxOutCir div.advantageBoxOutMinCir:nth-child(1),
+#mainArea .advantage .advantageBox .advantageBoxOut .advantageBoxOutCir div.advantageBoxOutMinCir:nth-child(2) {
+    align-items: flex-start;
+}
+#mainArea .advantage .advantageBox .advantageBoxOut .advantageBoxOutCir div.advantageBoxOutMinCir:nth-child(5),
+#mainArea .advantage .advantageBox .advantageBoxOut .advantageBoxOutCir div.advantageBoxOutMinCir:nth-child(6) {
+    align-items: flex-end;
+}
+#mainArea .advantage .advantageBox .advantageBoxOut .advantageBoxOutCir .advantageBoxOutMinCir .advantageBoxOutMinCirIn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#mainArea .advantage .advantageBox .advantageBoxOut .advantageBoxOutCir .advantageBoxOutMinCir .advantageBoxOutMinCirIn img{
+    width: 50px;
+}
+#mainArea .advantage .advantageBox .advantageBoxOut .advantageBoxOutCir .advantageBoxOutMinCir .advantageBoxOutMinCirIn h3{
+    margin: 0;
+}
+#mainArea .advantage .advantageBox .advantageBoxOut a{
+    position: absolute;
+    width: 126px;
+    height: 126px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #ffffff;
+    align-content: center;
+}
+#mainArea .product .productBox h3{
+    color: #303030;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.76;
+    letter-spacing: 1.56px;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 40px;
+}
+#mainArea .product .productBox h3::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    width: 6px;
+    height: 30px;
+    background-color: #296caf;
+}
+#mainArea .product .productBox ul.productSlider {
+    display: flex;
+    flex-direction: row;
+}
+#mainArea .product .productBox ul li {
+    width: calc(25% - 5px);
+}
+#mainArea .product .productBox .slider-controls {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#mainArea .product .productBox .slick-dots {
+    display: none;
+}
+#mainArea .product .productBox .progress-bar {
+    position: relative;
+    height: 5px;
+    background-color: #e0e0e0;
+    border-radius: 2px;
+    overflow: hidden;
+    width: 80%;
+}
+#mainArea .product .productBox .progress-bar .progress {
+    height: 100%;
+    width: 0%; /* 动态改变宽度 */
+    background-color: #296caf; /* 进度条颜色 */
+    transition: width 0.5s ease;
+}
+
+#mainArea .product .productBox .arrows {
+    display: flex;
+    gap: 5px; /* 箭头之间的间距 */
+    margin-left: 10px; /* 与进度条的间距 */
+}
+
+#mainArea .product .productBox .arrow-left,
+#mainArea .product .productBox .arrow-right {
+    color: #000;
+    border: none;
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#mainArea .product .productBox .arrow-left:hover,
+#mainArea .product .productBox .arrow-right:hover {
+    background-color: #296caf;
+    color: #fff;
+}   
