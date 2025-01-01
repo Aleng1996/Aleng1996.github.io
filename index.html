@@ -368,9 +368,115 @@
                     <div class="newsBoxImg">
                         <img src="/images/news.jpg" alt="首頁說明">
                     </div>
-                    <div class="newsBoxList">
-                        
-                    </div>  
+                    <div class="newsBoxTxt">
+                        <ul class="newsSlider">
+                            <li>
+                                <div>
+                                    <a href="/">
+                                        <div class="timeBox">
+                                            <div class="dayBox">12</div>
+                                            <div class="momthBox">Dec 2024</div>
+                                        </div>
+                                        <div class="txtBox">
+                                            <h4>財務訊息</h4>
+                                            <h3>本公司2024年11月自結損益公告</h3>
+                                            <p></p>
+                                        </div>
+                                        <div class="moreBox">></div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="/">
+                                        <div class="timeBox">
+                                            <div class="dayBox">5</div>
+                                            <div class="momthBox">Dec 2024</div>
+                                        </div>
+                                        <div class="txtBox">
+                                            <h4>財務訊息</h4>
+                                            <h3>本公司2024年11月合併營收公告</h3>
+                                            <p>本公司2024年11月份合併營收淨額為新台幣1,125,981仟元 (MoM-3.29%，YoY+8.72%)。</p>
+                                        </div>
+                                        <div class="moreBox">></div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="/">
+                                        <div class="timeBox">
+                                            <div class="dayBox">28</div>
+                                            <div class="momthBox">Nov 2024</div>
+                                        </div>
+                                        <div class="txtBox">
+                                            <h4>活動資訊</h4>
+                                            <h3>2024年第十屆工程師大會</h3>
+                                            <p>為持續深耕工程技術之學習氛圍與提升整體研發之技術能力，本公司於十一月二十五日舉行第十屆工程師大會。</p>
+                                        </div>
+                                        <div class="moreBox">></div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="/">
+                                        <div class="timeBox">
+                                            <div class="dayBox">12</div>
+                                            <div class="momthBox">Nov 2024</div>
+                                        </div>
+                                        <div class="txtBox">
+                                            <h4>財務訊息</h4>
+                                            <h3>本公司2024年10月自結損益公告</h3>
+                                            <p></p>
+                                        </div>
+                                        <div class="moreBox">></div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="/">
+                                        <div class="timeBox">
+                                            <div class="dayBox">5</div>
+                                            <div class="momthBox">Nov 2024</div>
+                                        </div>
+                                        <div class="txtBox">
+                                            <h4>財務訊息</h4>
+                                            <h3>本公司2024年10月合併營收公告</h3>
+                                            <p>本公司2024年10月份合併營收淨額為新台幣1,164,332仟元 (MoM-10.43%，YoY+6.81%)。</p>
+                                        </div>
+                                        <div class="moreBox">></div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="/">
+                                        <div class="timeBox">
+                                            <div class="dayBox">22</div>
+                                            <div class="momthBox">Oct 2024</div>
+                                        </div>
+                                        <div class="txtBox">
+                                            <h4>活動資訊</h4>
+                                            <h3>台灣晶技 @ ITSF 2024耀眼亮相國際定時與同步論壇</h3>
+                                            <p>誠摯歡迎蒞臨於展位編號#12參觀指教<br>Á11月4日-7日</p>
+                                        </div>
+                                        <div class="moreBox">></div>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="slider-controls">
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <div class="arrows">
+                                <button class="news-arrow-left">&lt;</button>
+                                <button class="news-arrow-right">&gt;</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -443,5 +549,16 @@
     if (contentBoxes.length > 0) {
         contentBoxes[0].classList.add('active');
     }
+
+    $('.newsSlider').slick({
+    vertical: true, // 垂直輪播
+    slidesToShow: 3, // 顯示3個項目
+    slidesToScroll: 1, // 每次滾動1個項目
+    dots: false, // 關閉點導航
+    arrows: true, // 啟用箭頭
+    prevArrow: $('.news-arrow-left'), // 自訂左箭頭
+    nextArrow: $('.news-arrow-right'), // 自訂右箭頭
+    autoplay: false, // 自動播放
+});
 </script>
 </html>

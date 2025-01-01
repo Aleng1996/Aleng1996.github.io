@@ -22,13 +22,13 @@ img {
 	width: 100%;
 	max-width: 1406px;
 }
-#mainArea .solution,#mainArea .advantage,#mainArea .product {padding: 50px 0 80px;}
-#mainArea .solution {background-color: #f7f7f7;}
-#mainArea .solution .wrap,#mainArea .advantage .wrap,#mainArea .product .wrap {width: 100%;max-width: 1400px;margin: 0 auto;}
-#mainArea .solution .titleBox,#mainArea .advantage .titleBox,#mainArea .product .titleBox {display: flex;flex-direction: column;align-items: center;}
-#mainArea .solution .titleBox h2,#mainArea .advantage .titleBox h2,#mainArea .product .titleBox h2 {color: #303030; font-size: 43px; font-weight: bold; letter-spacing: 3.44px; line-height: 1.5; margin: 0;}
-#mainArea .solution .titleBox span,#mainArea .advantage .titleBox span,#mainArea .product .titleBox span {font-size: 23px; color: #296caf; font-weight:bolder; letter-spacing: 1.84px; margin-top: 10px;}
-#mainArea .solution .titleBox span::after,#mainArea .advantage .titleBox span::after,#mainArea .product .titleBox span::after {display: block; content: ""; width: 36px; height: 3px; margin: 29px auto 23px; background-color: #296caf;}
+#mainArea .solution,#mainArea .advantage,#mainArea .product,#mainArea .news {padding: 50px 0 80px;}
+#mainArea .solution,#mainArea .product,#mainArea .news {background-color: #f7f7f7;}
+#mainArea .solution .wrap,#mainArea .advantage .wrap,#mainArea .product .wrap,#mainArea .news .wrap {width: 100%;max-width: 1400px;margin: 0 auto;}
+#mainArea .solution .titleBox,#mainArea .advantage .titleBox,#mainArea .product .titleBox,#mainArea .news .titleBox {display: flex;flex-direction: column;align-items: center;}
+#mainArea .solution .titleBox h2,#mainArea .advantage .titleBox h2,#mainArea .product .titleBox h2,#mainArea .news .titleBox h2 {color: #303030; font-size: 43px; font-weight: bold; letter-spacing: 3.44px; line-height: 1.5; margin: 0;}
+#mainArea .solution .titleBox span,#mainArea .advantage .titleBox span,#mainArea .product .titleBox span,#mainArea .news .titleBox span {font-size: 23px; color: #296caf; font-weight:bolder; letter-spacing: 1.84px; margin-top: 10px;}
+#mainArea .solution .titleBox span::after,#mainArea .advantage .titleBox span::after,#mainArea .product .titleBox span::after,#mainArea .news .titleBox span::after {display: block; content: ""; width: 36px; height: 3px; margin: 29px auto 23px; background-color: #296caf;}
 #mainArea .solution .solutionBtn ul {
     list-style: none;
     padding: 0;
@@ -322,4 +322,84 @@ img {
 #mainArea .product .productBox .arrow-right:hover {
     background-color: #296caf;
     color: #fff;
-}   
+}
+
+#mainArea .news .newsBox {
+    display: flex;
+    flex-direction: row;
+    position: relative; /* 為箭頭定位提供支持 */
+    overflow: hidden; /* 隱藏滾動內容 */
+}
+
+#mainArea .news .newsBox .newsBoxImg {
+    width: 35%;
+}
+
+#mainArea .news .newsBox .newsBoxImg img {
+    width: 100%;
+}
+
+#mainArea .news .newsBox .newsBoxTxt {
+    width: 65%; /* 剩餘空間 */
+    position: relative; /* 為輪播內容定位 */
+}
+
+#mainArea .news .newsBox .newsBoxTxt .dayBox {
+    color: #505050;
+    font-size: 52px;
+    font-weight: bold;
+    letter-spacing: 1.04px;
+    line-height: 1;
+}
+#mainArea .news .newsBox .newsBoxTxt ul li {
+    height: 200px; /* 每個項目高度，適配輪播 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直置中 */
+}
+
+#mainArea .news .newsBox .newsBoxTxt ul li a {
+    display: grid;
+    grid-template-columns: 15% 80% 5%; /* 適配內容 */
+    align-items: center;
+}
+
+#mainArea .news .newsBox .newsBoxTxt .timeBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#mainArea .news .newsBox .news-arrow-left,
+#mainArea .news .newsBox .news-arrow-right {
+    color: #000;
+    border: 1px solid #000;
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent; /* 無背景色 */
+    z-index: 10; /* 保證箭頭在內容上方 */
+}
+
+#mainArea .news .newsBox .news-arrow-right {
+    right: 10px; /* 靠右邊 */
+}
+#mainArea .news .newsBox .slider-controls .arrows {
+    display: flex;
+    gap: 5px; /* 箭头之间的间距 */
+    flex-direction: row;
+    justify-content: flex-end;
+}
+#mainArea .news .newsBox .news-arrow-left:hover,
+#mainArea .news .newsBox .news-arrow-right:hover {
+    background-color: #296caf;
+    color: #fff;
+}
+
